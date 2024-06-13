@@ -104,12 +104,7 @@ public final class ExtensionUtil {
     Set<PaletteEntry> result = new HashSet<PaletteEntry>();
 
     // Determine the project
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
+    IJavaProject javaProject = JavaCore.create(project);
 
     if (javaProject != null) {
 
@@ -443,12 +438,7 @@ public final class ExtensionUtil {
     List<CustomServiceTask> result = new ArrayList<CustomServiceTask>();
 
     // Determine the project
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
+    IJavaProject javaProject = JavaCore.create(project);
 
     if (javaProject != null) {
 
@@ -478,12 +468,7 @@ public final class ExtensionUtil {
     List<CustomUserTask> result = new ArrayList<CustomUserTask>();
 
     // Determine the project
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
+    IJavaProject javaProject = JavaCore.create(project);
 
     if (javaProject != null) {
 
@@ -515,12 +500,7 @@ public final class ExtensionUtil {
 
     addToCustomServiceTasks(result);
 
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
+    IJavaProject javaProject = JavaCore.create(project);
 
     if (javaProject != null) {
 
@@ -654,12 +634,7 @@ public final class ExtensionUtil {
 
     addToCustomUserTasks(result);
 
-    IJavaProject javaProject = null;
-    try {
-      javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
-    } catch (CoreException e) {
-      // skip, not a Java project
-    }
+    IJavaProject javaProject = JavaCore.create(project);
 
     if (javaProject != null) {
 

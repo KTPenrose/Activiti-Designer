@@ -139,7 +139,7 @@ public class ActivitiUiUtil {
 
     IPath dependsOnPath = containerProject.getProject().getFullPath();
 
-    IJavaProject javaProject = (IJavaProject) currentProject.getNature(JavaCore.NATURE_ID);
+    IJavaProject javaProject = JavaCore.create(currentProject);
     IClasspathEntry prjEntry = JavaCore.newProjectEntry(dependsOnPath, true);
 
     boolean dependsOnPresent = false;

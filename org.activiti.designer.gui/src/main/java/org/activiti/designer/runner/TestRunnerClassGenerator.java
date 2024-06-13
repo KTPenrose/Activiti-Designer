@@ -60,7 +60,7 @@ public class TestRunnerClassGenerator {
         project.getFolder("src/test/resources").create(true, true, new NullProgressMonitor());
       }
     }
-    IJavaProject javaProject = (IJavaProject) project.getNature(JavaCore.NATURE_ID);
+    IJavaProject javaProject = JavaCore.create(project);
     IPackageFragmentRoot srcRoot = javaProject.getPackageFragmentRoot(sourceFolder);
 
     IPackageFragment pack = srcRoot.createPackageFragment("org.activiti.designer.test", false, null);
